@@ -1,6 +1,6 @@
 {
-  "homepage": "http://karukerapixel.github.io/kaza-app",
-  "name": "kaza-app",
+  "homepage": "http://karukerapixel.github.io/kaza",
+  "name": "kaza",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

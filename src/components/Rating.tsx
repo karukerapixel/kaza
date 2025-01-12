@@ -1,3 +1,4 @@
+import React from 'react';
 import { RatingWrapper } from '../styles/Rating';
 import redStar from '../assets/red-star.png';
 

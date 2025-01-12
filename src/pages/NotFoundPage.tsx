@@ -1,7 +1,8 @@
+import React from 'react';
 import { NotFoundPageContent, NotFoundPageRedirectLink, NotFoundPageWrapper } from "../styles/NotFoundPage";
 
 
-const NotFoundPage = () => {
+const NotFoundPage: React.FC = () => {
   return (
     <main>
       <NotFoundPageWrapper>

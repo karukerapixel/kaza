@@ -1,3 +1,4 @@
+import React from 'react';
 import { GalleryList, GalleryWrapper } from '../styles/Home';
 import HousingCard from '../components/HousingCard';
 import housings from '../data/housings.json'

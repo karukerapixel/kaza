@@ -32,14 +32,23 @@
     "extends": [
       "eslint:recommended",
       "plugin:react/recommended",
-      "plugin:@typescript-eslint/recommended",
-      "plugin:prettier/recommended"
+      "plugin:@typescript-eslint/recommended"
     ],
     "plugins": [
       "react",
       "@typescript-eslint",
       "prettier"
-    ]
+    ],
+    "rules": {
+      "@typescript-eslint/no-unused-expressions": [
+        "error",
+        {
+          "allowShortCircuit": true,
+          "allowTernary": true,
+          "allowTaggedTemplates": true
+        }
+      ]
+    }
   },
   "browserslist": {
     "production": [
@@ -58,6 +67,7 @@
     "@typescript-eslint/eslint-plugin": "^8.19.1",
     "@typescript-eslint/parser": "^8.19.1",
     "eslint": "^9.18.0",
+    "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
     "eslint-plugin-react": "^7.37.3",
     "gh-pages": "^6.3.0",

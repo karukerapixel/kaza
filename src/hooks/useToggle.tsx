@@ -10,7 +10,6 @@ type UseToggleReturn = [boolean, () => void];
  *   - The current boolean value.
  *   - A function to toggle the boolean value.
  */
-
 export const useToggle = (initialValue: boolean = false): UseToggleReturn => {
   // State to track the current boolean value, initialized with the provided initialValue
   const [value, setValue] = useState<boolean>(initialValue);

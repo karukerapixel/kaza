@@ -10,10 +10,10 @@ import Carousel from '../components/Carousel';
 import Dropdown from '../components/Dropdown';
 import Rating from '../components/Rating';
 import housings from '../data/housings.json';
-import Error from './NotFoundPage';
+import NotFoundPage from './NotFoundPage';
 
 // Define the structure of a housing object
-interface HousingData {
+type HousingData = {
   id: string;
   pictures: string[];
   title: string;
@@ -26,7 +26,7 @@ interface HousingData {
   rating: string;
   description: string;
   equipments: string[];
-}
+};
 
 const Housing: React.FC = () => {
   const { id } = useParams<{ id: string }>(); // Get the housing ID from the route
@@ -40,22 +40,34 @@ const Housing: React.FC = () => {
 
   // Display a message if no housing is found
   if (!data) {
-    return <Error />;
+    return <NotFoundPage />;
   }
+
+  // Unstructuring the data state to access properties directly
+  const {
+    title,
+    pictures,
+    location,
+    tags,
+    host,
+    rating,
+    description,
+    equipments,
+  } = data;
 
   return (
     <>
       <HousingHeader>
-        <h1>{data.title}</h1>
+        <h1>{title}</h1>
       </HousingHeader>
 
-      <Carousel pictures={data.pictures} />
+      <Carousel pictures={pictures} />
 
       <HousingContent>
         <HousingContentBloc>
-          <h2>{data.location}</h2>
+          <h2>{location}</h2>
           <ul>
-            {data.tags.map((tag, index) => (
+            {tags.map((tag, index) => (
               <li key={index}>{tag}</li>
             ))}
           </ul>
@@ -63,20 +75,20 @@ const Housing: React.FC = () => {
 
         <HousingContentBloc style={{ alignItems: 'end' }}>
           <div>
-            <span>{data.host.name}</span>
-            <img src={data.host.picture} alt={`profil de ${data.host.name}`} />
+            <span>{host.name}</span>
+            <img src={host.picture} alt={`profil de ${host.name}`} />
           </div>
-          <Rating score={data.rating} />
+          <Rating score={rating} />
         </HousingContentBloc>
       </HousingContent>
 
       <HousingDropdowns>
-        <Dropdown heading={'description'} content={<p>{data.description}</p>} />
+        <Dropdown heading={'description'} content={<p>{description}</p>} />
         <Dropdown
           heading={'équipement'}
           content={
             <ul>
-              {data.equipments.map((equipment, index) => (
+              {equipments.map((equipment, index) => (
                 <li key={index}>{equipment}</li>
               ))}
             </ul>

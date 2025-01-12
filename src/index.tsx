@@ -10,12 +10,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <StyledProvider>
-      <HashRouter
-        future={{
-          v7_startTransition: true,
-          v7_relativeSplatPath: true,
-        }}
-      >
+      <HashRouter>
         <Routes>
           <Route path="/*" element={<App />} />
         </Routes>

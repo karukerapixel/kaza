@@ -30,9 +30,16 @@
   },
   "eslintConfig": {
     "extends": [
-      "eslint:recommended"
+      "eslint:recommended",
+      "plugin:react/recommended",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:prettier/recommended"
     ],
-    "rules": {}
+    "plugins": [
+      "react",
+      "@typescript-eslint",
+      "prettier"
+    ]
   },
   "browserslist": {
     "production": [
@@ -48,9 +55,12 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@typescript-eslint/eslint-plugin": "^8.19.1",
+    "@typescript-eslint/parser": "^8.19.1",
     "eslint": "^9.18.0",
+    "eslint-plugin-prettier": "^5.2.1",
     "eslint-plugin-react": "^7.37.3",
-    "gh-pages": "^6.2.0",
+    "gh-pages": "^6.3.0",
     "react-scripts": "^5.0.1",
     "semver": "^7.6.3"
   }

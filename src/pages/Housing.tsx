@@ -1,17 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { TbHeart, TbShare } from 'react-icons/tb';
 import {
   HousingContent,
   HousingContentBloc,
   HousingDropdowns,
   HousingHeader,
-  HousingHeaderButtons,
-} from './style';
-import Carousel from '../../components/Carousel';
-import Dropdown from '../../components/Dropdown';
-import Rating from '../../components/Rating';
-import housings from '../../data/housings.json';
+} from '../styles/Housing';
+import Carousel from '../components/Carousel';
+import Dropdown from '../components/Dropdown';
+import Rating from '../components/Rating';
+import housings from '../data/housings.json';
+import Error from './NotFoundPage';
 
 // Define the structure of a housing object
 interface HousingData {
@@ -41,23 +40,13 @@ const Housing: React.FC = () => {
 
   // Display a message if no housing is found
   if (!data) {
-    return <div>Housing Not Found</div>;
+    return <Error />;
   }
 
   return (
     <>
       <HousingHeader>
         <h1>{data.title}</h1>
-        <HousingHeaderButtons>
-          <button>
-            <TbShare />
-            <span>Partager</span>
-          </button>
-          <button>
-            <TbHeart />
-            <span>Enregistrer</span>
-          </button>
-        </HousingHeaderButtons>
       </HousingHeader>
 
       <Carousel pictures={data.pictures} />

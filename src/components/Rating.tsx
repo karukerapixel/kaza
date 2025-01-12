@@ -1,6 +1,6 @@
-import { RatingWrapper } from './style';
-import redStar from '../../assets/red-star.png';
-import greyStar from '../../assets/grey-star.png';
+import { RatingWrapper } from '../styles/Rating';
+import redStar from '../assets/red-star.png';
+
 
 interface RatingProps {
   score: string;
@@ -21,7 +21,7 @@ const Rating: React.FC<RatingProps> = ({ score }) => {
 
   // Adding empty stars to complete until MAX_RATING
   for (let i = 0; i < MAX_RATING - validScore; i++) {
-    hostRate.push(<img key={`empty-${i}`} src={greyStar} alt="empty star" />);
+    hostRate.push(<img key={`empty-${i}`} src={'greyStar'} alt="empty star" />);
   }
 
   return <RatingWrapper>{hostRate}</RatingWrapper>;

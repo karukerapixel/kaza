@@ -7,7 +7,7 @@ export const HousingHeader = styled.div`
   margin-top: 24px;
 
   > h1 {
-    font-size: 1.9rem;
+    font-size: 1.7rem;
   }
 `;
 
@@ -48,7 +48,7 @@ export const HousingContentBloc = styled.div`
   justify-content: space-between;
 
   > h2 {
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
 
   > ul {

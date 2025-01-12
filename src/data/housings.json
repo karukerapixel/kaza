@@ -10,13 +10,13 @@
       "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-4.jpg",
       "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-5.jpg"
     ],
-    "description": "Un charmant appartement situé au cœur de Lyon. Parfait pour se détendre après une journée de découverte, avec un accès rapide aux transports et aux attractions locales.",
+    "description": "Votre maison loin de chez vous. Que vous veniez de l'autre bout du monde, ou juste de quelques stations de RER, vous vous sentirez chez vous dans notre appartement.",
     "host": {
       "name": "Nathalie Jean",
       "picture": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/profile-picture-12.jpg"
     },
     "rating": "5",
-    "location": "Lyon, Rhône-Alpes, France",
+    "location": "Ile de France - Paris 17e",
     "equipments": [
       "Équipements de base",
       "Micro-Ondes",
@@ -24,23 +24,11 @@
       "Frigo",
       "WIFI"
     ],
-    "tags": ["Centre-ville", "Historique"],
-    "price_per_night": 143,
-    "available_dates": [
-      "1 - 6 déc.",
-      "9 - 13 déc.",
-      "17 - 21 déc.",
-      "25 - 29 déc."
-    ],
-    "rules": ["Non-fumeur", "Pas de fêtes", "Animaux interdits"],
-    "area": 43,
-    "bedrooms": 1,
-    "beds": 3,
-    "bathrooms": 1
+    "tags": ["Batignolle", "Montmartre"]
   },
   {
     "id": "b9123946",
-    "title": "Magnifique appartement",
+    "title": "Magnifique appartement proche Canal Saint Martin",
     "cover": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-1-1.jpg",
     "pictures": [
       "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-1-1.jpg",
@@ -50,13 +38,13 @@
       "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-1-5.jpg",
       "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-1-6.jpg"
     ],
-    "description": "Profitez d'un appartement moderne et spacieux situé à Nantes. Idéal pour les familles ou les voyages d'affaires, avec un accès rapide aux commerces et aux attractions locales.",
+    "description": "Profitez du charme de la vie parisienne dans un magnifique appartement. A 3 minutes à pied du Canl Saint Martin, vous serez proche des transports, mais également de nombreux commerces. L'appartement est tout équipé, et possède également un parking pour ceux qui souhaitent se déplacer en voiture.",
     "host": {
       "name": "Della Case",
       "picture": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/profile-picture-1.jpg"
     },
     "rating": "4",
-    "location": "Nantes, Pays de la Loire, France",
+    "location": "Ile de France - Paris 10e",
     "equipments": [
       "Parking",
       "Sèche Cheveux",
@@ -65,34 +53,7 @@
       "Cuisine équipée",
       "Télévision"
     ],
-    "tags": ["Centre", "Commerce", "Moderne"],
-    "price_per_night": 149,
-    "available_dates": ["1 - 7 déc.", "13 - 19 déc.", "25 - 31 déc."],
-    "reviews": [
-      {
-        "user": {
-          "picture": "",
-          "name": "Marc Leclerc",
-          "origins": "Lille, Hauts-de-France, France"
-        },
-        "rating": 5,
-        "comment": "L'hôte est très accueillant et le logement est magnifique."
-      },
-      {
-        "user": {
-          "picture": "",
-          "name": "Julie Dupont",
-          "origins": "Bordeaux, Nouvelle-Aquitaine, France"
-        },
-        "rating": 4,
-        "comment": "Parfait pour un week-end en amoureux, très cosy !"
-      }
-    ],
-    "rules": ["Non-fumeur", "Pas de fêtes", "Animaux interdits"],
-    "area": 93,
-    "bedrooms": 1,
-    "beds": 4,
-    "bathrooms": 2
+    "tags": ["Canal Saint Martin", "République", "Appartement"]
   },
   {
     "id": "46d188c5",
@@ -104,27 +65,15 @@
       "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-2-3.jpg",
       "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-2-4.jpg"
     ],
-    "description": "Découvrez le charme d'un studio élégant et moderne situé au cœur de Lille. Idéal pour explorer les Buttes Chaumont locales et profiter de toutes les commodités nécessaires pour un séjour inoubliable.",
+    "description": "À seulement deux pas des Buttes Chaumont, venez découvrir Paris dans ce studio tout équipé. Entièrement équipé pour votre confort et élégamment décoré, il vous permettra de vivre comme un Parisien le temps de votre séjour.",
     "host": {
       "name": "Franck Maher",
       "picture": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/profile-picture-2.jpg"
     },
     "rating": "3",
-    "location": "Lille, Hauts-de-France, France",
+    "location": "Ile de France - Paris 20e",
     "equipments": ["Wi-fi", "Cuisine équipée", "Télévision", "Sèche Cheveux"],
-    "tags": ["Centre-ville", "Culture locale", "Studio"],
-    "price_per_night": 158,
-    "available_dates": [
-      "1 - 5 déc.",
-      "9 - 13 déc.",
-      "17 - 21 déc.",
-      "25 - 29 déc."
-    ],
-    "rules": ["Non-fumeur", "Pas de fêtes", "Animaux interdits"],
-    "area": 69,
-    "bedrooms": 3,
-    "beds": 3,
-    "bathrooms": 1
+    "tags": ["Buttes Chaumont", "Laumière", "Studio"]
   },
   {
     "id": "7af00cd6",
@@ -136,13 +85,13 @@
       "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-3-3.jpg",
       "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-3-4.jpg"
     ],
-    "description": "Installez-vous confortablement dans ce charmant appartement situé à Bordeaux, Nouvelle-Aquitaine, France. Idéal pour les voyageurs en quête de tranquillité tout en restant proche de la vie nocturne animée de la ville.",
+    "description": "Venez découvrir Paris en séjournant dans ce nid douillet au coeur du 11ème. La vue sur le parc résidentiel saura vous reposer de vos longues journées de tourisme dans la capitale française. Et pour les plus fêtards d'entre vous, la rue Jean Pierre Timbaud vous permettra de découvrir la night-life parisienne à seulement 5 minutes de l'appartement.",
     "host": {
       "name": "Della Case",
       "picture": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/profile-picture-1.jpg"
     },
     "rating": "3",
-    "location": "Bordeaux, Nouvelle-Aquitaine, France",
+    "location": "Ile de France - Paris 11e",
     "equipments": [
       "Micro-Ondes",
       "Wi-fi",
@@ -150,23 +99,7 @@
       "Climatisation",
       "Télévision"
     ],
-    "tags": ["Centre-ville", "Night Life", "Culture locale"],
-    "price_per_night": 111,
-    "available_dates": [
-      "1 - 5 déc.",
-      "9 - 13 déc.",
-      "17 - 21 déc.",
-      "25 - 29 déc."
-    ],
-    "rules": [
-      "Non-fumeur",
-      "Pas de fêtes",
-      "Animaux autorisés sous conditions"
-    ],
-    "area": 64,
-    "bedrooms": 3,
-    "beds": 1,
-    "bathrooms": 2
+    "tags": ["Parmentier", "Marais", "Parc", "Night Life"]
   },
   {
     "id": "0979876d",
@@ -180,13 +113,13 @@
       "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-4-5.jpg",
       "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-4-6.jpg"
     ],
-    "description": "Vivez une expérience unique dans cet appartement de standing situé à Strasbourg. À quelques pas de la Petite France, profitez d'un confort inégalé et de toutes les commodités modernes.",
+    "description": "Ce loft entièrement rénové, et équipé de meubles de luxe saura vous séduire. Idéalement situé dans le 10ème arrondissement, vous déplacer dans Paris sera un véritable jeu d'enfant.",
     "host": {
       "name": "Franck Maher",
       "picture": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/profile-picture-2.jpg"
     },
     "rating": "5",
-    "location": "Strasbourg, Grand Est, France",
+    "location": "Ile de France - Paris 10e",
     "equipments": [
       "Frigo Américain",
       "Sèche Cheveux",
@@ -194,14 +127,7 @@
       "Chambre Séparée",
       "Parking"
     ],
-    "tags": ["Proche centre", "Petite France"],
-    "price_per_night": 175,
-    "available_dates": ["1 - 7 déc.", "13 - 19 déc.", "25 - 31 déc."],
-    "rules": ["Non-fumeur", "Pas de fêtes", "Animaux interdits"],
-    "area": 20,
-    "bedrooms": 3,
-    "beds": 1,
-    "bathrooms": 1
+    "tags": ["Goncourt", "Proche commerces"]
   },
   {
     "id": "f72a452f",
@@ -214,27 +140,15 @@
       "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-5-4.jpg",
       "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-5-5.jpg"
     ],
-    "description": "Imprégnez-vous de l'essence artistique de Toulouse, dans ce studio d'artiste unique. Idéalement situé pour explorer la culture locale, tout en profitant du confort moderne et du charme historique.",
+    "description": "Venez vous imprégner de la culture parisienne dans cet ancien studio d'artiste décoré avec goût, au coeur de Montmartre.",
     "host": {
       "name": "Line Rolland",
       "picture": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/profile-picture-3.jpg"
     },
     "rating": "5",
-    "location": "Toulouse, Occitanie, France",
+    "location": "Ile de France - Paris 18e",
     "equipments": ["Chambre Séparée", "Parking"],
-    "tags": ["Culture locale", "Studio", "Charme"],
-    "price_per_night": 282,
-    "available_dates": [
-      "1 - 5 déc.",
-      "9 - 13 déc.",
-      "17 - 21 déc.",
-      "25 - 29 déc."
-    ],
-    "rules": ["Non-fumeur", "Pas de fêtes", "Animaux interdits"],
-    "area": 22,
-    "bedrooms": 2,
-    "beds": 1,
-    "bathrooms": 1
+    "tags": ["Montmartre", "Culture", "Charme"]
   },
   {
     "id": "b4c67936",
@@ -246,13 +160,13 @@
       "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-6-3.jpg",
       "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-6-4.jpg"
     ],
-    "description": "Découvrez l'accessibilité et le confort dans ce studio abordable. Proche des transports et des sites touristiques majeurs, idéal pour les voyageurs à petit budget.",
+    "description": "Ce Studio entièrement fonctionnel sera votre parfait pied à terre pour toutes vos excursions parisiennes. Idéalement situé près des lignes 2 et 4, vous accéderez très rapidement à tous les points touristiques de Paris.",
     "host": {
       "name": "Hugo Perrier",
       "picture": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/profile-picture-4.jpg"
     },
     "rating": "3",
-    "location": "Rennes, Bretagne, France",
+    "location": "Ile de France - Paris 18e",
     "equipments": [
       "Salle de bains",
       "Frigo",
@@ -261,14 +175,7 @@
       "Bureau",
       "Parking"
     ],
-    "tags": ["Transports", "Abordable", "Studio"],
-    "price_per_night": 144,
-    "available_dates": ["1 - 7 déc.", "15 - 21 déc.", "25 - 31 déc."],
-    "rules": ["Non-fumeur", "Pas de fêtes", "Animaux interdits"],
-    "area": 23,
-    "bedrooms": 2,
-    "beds": 1,
-    "bathrooms": 2
+    "tags": ["Transports", "Cheap", "18ème"]
   },
   {
     "id": "bc6f7112",
@@ -282,13 +189,13 @@
       "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-7-5.jpg",
       "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-7-6.jpg"
     ],
-    "description": "Plongez dans le luxe à Marseille, Provence-Alpes-Côte d'Azur, France, avec cet appartement élégant et moderne. À quelques pas des plages et des principales attractions, profitez de moments inoubliables dans un cadre exceptionnel.",
+    "description": "Ce superbe appartement vous surprendra par son charme. Entièrement refait à neuf, il est équipé avec goût. La taille des pièces vous fera douter que vous êtes à Paris. Mais il vous suffit de sortir pour voir que vous êtes au coeur des plus belles attractions de Paris : le Louvre, la Tour Eiffel, le Grand Palais sont à deux pas. À vous de venir découvrir Paris !",
     "host": {
       "name": "Sébastien Fournier",
       "picture": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/profile-picture-5.jpg"
     },
     "rating": "5",
-    "location": "Marseille, Provence-Alpes-Côte d'Azur, France",
+    "location": "Ile de France - Paris 6e",
     "equipments": [
       "Wi-fi",
       "Sèche Cheveux",
@@ -297,19 +204,7 @@
       "Lit King Size",
       "Ascenseur"
     ],
-    "tags": ["Luxe", "Vue mer", "Plages"],
-    "price_per_night": 141,
-    "available_dates": [
-      "1 - 5 déc.",
-      "9 - 13 déc.",
-      "17 - 21 déc.",
-      "25 - 29 déc."
-    ],
-    "rules": ["Non-fumeur", "Pas de fêtes", "Animaux interdits"],
-    "area": 107,
-    "bedrooms": 2,
-    "beds": 4,
-    "bathrooms": 1
+    "tags": ["Luxe", "Tour Eiffel", "T3", "6ème"]
   },
   {
     "id": "cb2f9222",
@@ -322,13 +217,13 @@
       "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-8-4.jpg",
       "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-8-5.jpg"
     ],
-    "description": "Idéale pour des séjours en famille, cette suite moderne à Annecy, Auvergne-Rhône-Alpes, France offre une vue exceptionnelle sur les Alpes et un accès facile au lac. Profitez d'un cadre paisible tout en restant proche des commerces et restaurants locaux.",
+    "description": "Paris vous tend les bras ! En famille ou entre amis, venez découvrir la ville de l'amour dans un appartement de goût. Vous pourrez profiter de tous les commerces seulement à quelques minutes de l'appartement. Sa proximité avec la gare Montparnasse en fait également un choix idéal pour celles et ceux qui doivent prendre un train.",
     "host": {
       "name": "Adrien Chiran",
       "picture": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/profile-picture-6.jpg"
     },
     "rating": "4",
-    "location": "Annecy, Auvergne-Rhône-Alpes, France",
+    "location": "Ile de France - Paris 14e",
     "equipments": [
       "Climatisation",
       "Machine à laver",
@@ -336,19 +231,7 @@
       "Wi-fi",
       "Parking"
     ],
-    "tags": ["Lac d'Annecy", "Famille", "Vue montagne"],
-    "price_per_night": 174,
-    "available_dates": [
-      "1 - 5 déc.",
-      "9 - 13 déc.",
-      "17 - 21 déc.",
-      "25 - 29 déc."
-    ],
-    "rules": ["Non-fumeur", "Pas de fêtes", "Animaux interdits"],
-    "area": 21,
-    "bedrooms": 3,
-    "beds": 2,
-    "bathrooms": 1
+    "tags": ["Montparnasse", "Commerces", "Famille"]
   },
   {
     "id": "d60ca600",
@@ -360,13 +243,13 @@
       "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-9-3.jpg",
       "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-9-4.jpg"
     ],
-    "description": "Profitez d'un havre de paix à Grenoble, Auvergne-Rhône-Alpes, France. Situé au bord d'un magnifique parc, cet appartement moderne offre une vue apaisante et un accès rapide aux attractions locales. Idéal pour les amateurs de calme et de verdure.",
+    "description": "Respirer en plein coeur de Paris ? C'est possible ! Avec vue sur un parc résidentiel, vous pourrez ouvrir les fenêtres sans avoir à souffrir du bruit des voitures et de la pollution. Au contraire, vous pourrez écouter les oiseaux. Notre appartement est également idéalement situé au coeur du 11ème arrondissement. Proche des lignes 3 et 2, vous pourrez découvrir Paris sans effort !",
     "host": {
       "name": "Adrien Chiran",
       "picture": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/profile-picture-6.jpg"
     },
     "rating": "3",
-    "location": "Grenoble, Auvergne-Rhône-Alpes, France",
+    "location": "Ile de France - Paris 11e",
     "equipments": [
       "Vue Parc",
       "Chauffage",
@@ -375,18 +258,7 @@
       "Wi-fi",
       "Ascenseur"
     ],
-    "tags": ["Nature", "Calme", "Moderne"],
-    "price_per_night": 118,
-    "available_dates": ["1 - 7 déc.", "15 - 21 déc.", "25 - 31 déc."],
-    "rules": [
-      "Non-fumeur",
-      "Pas de fêtes",
-      "Animaux autorisés sous conditions"
-    ],
-    "area": 103,
-    "bedrooms": 2,
-    "beds": 1,
-    "bathrooms": 2
+    "tags": ["Père Lachaise", "11e", "Metro 3", "Metro 2"]
   },
   {
     "id": "2cf259e1",
@@ -398,22 +270,15 @@
       "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-10-3.jpg",
       "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-10-4.jpg"
     ],
-    "description": "Découvrez le charme de Dijon, Bourgogne-Franche-Comté, France dans ce studio confortable situé au cœur du quartier historique. Une cuisine équipée et un accès facile aux principales attractions locales en font un choix idéal pour les touristes en quête de découverte.",
+    "description": "Situé en plein coeur du Marais, notre studio est idéal pour les touristes en quête de découverte. Sa cuisine toute équipée est particulièrement pratique.",
     "host": {
       "name": "Victor Moran",
       "picture": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/profile-picture-7.jpg"
     },
     "rating": "4",
-    "location": "Dijon, Bourgogne-Franche-Comté, France",
+    "location": "Ile de France - Paris 11e",
     "equipments": ["Clic-clac", "Four", "Sèche Cheveux", "Wi-fi"],
-    "tags": ["Historique", "Studio", "Confort"],
-    "price_per_night": 236,
-    "available_dates": ["1 - 7 déc.", "13 - 19 déc.", "25 - 31 déc."],
-    "rules": ["Non-fumeur", "Pas de fêtes", "Animaux interdits"],
-    "area": 38,
-    "bedrooms": 3,
-    "beds": 3,
-    "bathrooms": 2
+    "tags": ["Marais", "Studio", "Parc"]
   },
   {
     "id": "5323c29b",
@@ -425,13 +290,13 @@
       "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-11-4.jpg",
       "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-11-5.jpg"
     ],
-    "description": "Explorez la ville historique de Lille, Hauts-de-France, France depuis ce studio fonctionnel et confortable. Situé à proximité des transports en commun et des commerces, c'est un point de départ idéal pour découvrir tout ce que Lille a à offrir.",
+    "description": "Idéalement situé à 2 pas de la place de la République, ce studio particulièrement fonctionnel est parfait pour découvrir Paris. Proche de tous les points d'intérêts grâce aux 5 lignes de métro qui sont à 5 minutes, vous pourrez rentabiliser votre temps passé à la capitale.",
     "host": {
       "name": "Sarah Devit",
       "picture": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/profile-picture-8.jpg"
     },
     "rating": "3",
-    "location": "Lille, Hauts-de-France, France",
+    "location": "Ile de France - Paris 3e",
     "equipments": [
       "Rangements",
       "Lit",
@@ -440,14 +305,7 @@
       "TV",
       "Bouilloire"
     ],
-    "tags": ["Centre", "Confort", "Studio", "Transports", "Commerces"],
-    "price_per_night": 126,
-    "available_dates": ["1 - 7 déc.", "15 - 21 déc.", "25 - 31 déc."],
-    "rules": ["Non-fumeur", "Pas de fêtes", "Animaux interdits"],
-    "area": 22,
-    "bedrooms": 1,
-    "beds": 2,
-    "bathrooms": 2
+    "tags": ["Marais", "République", "Studio", "Proche Métros", "Commerces"]
   },
   {
     "id": "af6d2d48",
@@ -460,32 +318,21 @@
       "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-12-4.jpg",
       "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-12-5.jpg"
     ],
-    "description": "Évadez-vous dans la tranquillité absolue à Chambéry, Auvergne-Rhône-Alpes, France. Niché en pleine nature, ce bungalow vous offre tout le confort moderne avec un accès direct à la forêt environnante. Réveillez-vous au son des oiseaux et ressourcez-vous dans un cadre idyllique.",
+    "description": "Quittez Paris pour vous mettre au vert. À seulement 30 minutes de la Gare du Nord, venez découvrir la forêt d'Ecouen directement depuis la fenêtre de votre bungalow. Entièrement équipé, ce logement saura vous accueillir dans le confort, tout en vous permettant de vous concentrer sur l'essentiel. Le matin, ouvrez les fenêtres, et profitez du chant des oiseaux.",
     "host": {
       "name": "Sarah Devit",
       "picture": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/profile-picture-8.jpg"
     },
     "rating": "5",
-    "location": "Chambéry, Auvergne-Rhône-Alpes, France",
+    "location": "Ile de France - Ecouen",
     "equipments": [
-      "Salle de bains",
+      "SDB",
       "Cuisine équipée",
       "Toilettes sèches",
       "Frigo",
       "Bouilloire"
     ],
-    "tags": ["Nature", "Forêt", "Randonnée"],
-    "price_per_night": 248,
-    "available_dates": ["1 - 7 déc.", "13 - 19 déc.", "25 - 31 déc."],
-    "rules": [
-      "Non-fumeur",
-      "Pas de fêtes",
-      "Animaux autorisés sous conditions"
-    ],
-    "area": 115,
-    "bedrooms": 1,
-    "beds": 1,
-    "bathrooms": 2
+    "tags": ["Forêt", "Nature", "Musée d'Ecouen"]
   },
   {
     "id": "7cbb378e",
@@ -498,37 +345,24 @@
       "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-13-5.jpg",
       "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-13-6.jpg"
     ],
-    "description": "Passez un séjour inoubliable à Colmar, Alsace, France dans cette maison spacieuse entourée de verdure. Idéale pour des vacances en famille ou entre amis, elle est entièrement équipée pour votre confort tout en offrant un accès rapide aux charmantes rues de Colmar.",
+    "description": "Vous chercher un endroit pour fêter un anniversaire entre amis tout en restant proche de Paris ? Ne cherchez plus ! Entièrement équipée, cette maison est l'endroit idéal pour se regrouper.",
     "host": {
       "name": "Karen Guillet",
       "picture": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/profile-picture-9.jpg"
     },
     "rating": "4",
-    "location": "Colmar, Alsace, France",
+    "location": "Ile de France - Arnouville",
     "equipments": [
-      "Salle de bains",
+      "SDB",
       "Cuisine équipée",
       "Frigo",
       "Bouilloire",
-      "Wi-Fi",
+      "WIFI",
       "Télévision",
       "Cintres",
       "Équipements de base"
     ],
-    "tags": ["Famille", "Nature", "Grande maison"],
-    "price_per_night": 179,
-    "available_dates": [
-      "1 - 4 déc.",
-      "7 - 10 déc.",
-      "13 - 16 déc.",
-      "19 - 22 déc.",
-      "25 - 28 déc."
-    ],
-    "rules": ["Non-fumeur", "Pas de fêtes", "Animaux interdits"],
-    "area": 111,
-    "bedrooms": 2,
-    "beds": 3,
-    "bathrooms": 2
+    "tags": ["Forêt", "Nature", "Grande maison"]
   },
   {
     "id": "ba55a0cc",
@@ -541,33 +375,26 @@
       "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-14-4.jpg",
       "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-14-5.jpg"
     ],
-    "description": "Profitez d’un séjour au calme dans cette maison T5 située à Aix-en-Provence, Provence-Alpes-Côte d'Azur, France. Parfaite pour les grands groupes, cette maison entièrement équipée offre tout le confort moderne à proximité des merveilles de la région.",
+    "description": "Maison T5. Idéale pour grands groupes. 45 minutes de Paris Saint-Lazare.",
     "host": {
       "name": "Karen Guillet",
       "picture": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/profile-picture-9.jpg"
     },
-    "rating": "4",
-    "location": "Aix-en-Provence, Provence-Alpes-Côte d'Azur, France",
+    "rating": "3",
+    "location": "Ile de France - Arnouville",
     "equipments": [
       "Bouilloire",
-      "Salle de bains",
+      "SDB",
       "Cuisine équipée",
       "Frigo",
-      "Wi-Fi",
-      "Télévision",
+      "WIFI",
+      "TV",
       "Cintres",
       "Four",
       "Micro-Ondes",
       "Parking"
     ],
-    "tags": ["Nature", "Famille", "Maison"],
-    "price_per_night": 242,
-    "available_dates": ["1 - 7 déc.", "13 - 19 déc.", "25 - 31 déc."],
-    "rules": ["Non-fumeur", "Pas de fêtes", "Animaux interdits"],
-    "area": 83,
-    "bedrooms": 1,
-    "beds": 1,
-    "bathrooms": 2
+    "tags": ["Nature", "Groupe", "Maison"]
   },
   {
     "id": "1e181317",
@@ -580,34 +407,23 @@
       "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-15-4.jpg",
       "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-15-5.jpg"
     ],
-    "description": "Découvrez le confort moderne dans ce loft de luxe situé à Bordeaux, Nouvelle-Aquitaine, France. Parfait pour les voyageurs d'affaires ou les escapades urbaines, ce logement est équipé pour vous sentir comme chez vous.",
+    "description": "Si vous êtes à la recherche de l'endroit idéal pour poser vos valises entre deux rdvs d'affaire, ne cherchez plus. Notre loft est l'endroit idéal. En plein coeur de la Défense, il dispose également de tous les équipements pour que vous soyez comme chez vous.",
     "host": {
       "name": "Julie Donatella",
       "picture": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/profile-picture-10.jpg"
     },
     "rating": "3",
-    "location": "Bordeaux, Nouvelle-Aquitaine, France",
+    "location": "Ile de France - La Défense",
     "equipments": [
       "Baie vitrée",
       "Télévision",
       "Four",
       "Frigo",
-      "Wi-Fi",
+      "Wi-fi",
       "Micro-Ondes",
       "Parking"
     ],
-    "tags": ["Centre", "Loft", "Luxe"],
-    "price_per_night": 136,
-    "available_dates": ["1 - 6 déc.", "11 - 16 déc.", "21 - 26 déc."],
-    "rules": [
-      "Non-fumeur",
-      "Pas de fêtes",
-      "Animaux autorisés sous conditions"
-    ],
-    "area": 21,
-    "bedrooms": 1,
-    "beds": 1,
-    "bathrooms": 1
+    "tags": ["La Défense", "Loft", "Luxe"]
   },
   {
     "id": "1e180563",
@@ -620,13 +436,13 @@
       "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-16-4.jpg",
       "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-16-5.jpg"
     ],
-    "description": "Découvrez cet appartement de charme à Montpellier, Occitanie, France. Avec des prestations haut de gamme et un accès rapide aux attractions locales, c'est le choix parfait pour un séjour inoubliable.",
+    "description": "Ce charmant appartement offre des prestations de luxe, aux portes de Paris. À deux pas de la ligne 3, vous pourrez accéder à toutes les attractions touristiques dont vous avez toujours rêvées.",
     "host": {
       "name": "Julie Donatella",
       "picture": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/profile-picture-10.jpg"
     },
     "rating": "4",
-    "location": "Montpellier, Occitanie, France",
+    "location": "Ile de France - Levallois",
     "equipments": [
       "Télévision",
       "Four",
@@ -635,18 +451,7 @@
       "Wi-fi",
       "Micro-Ondes"
     ],
-    "tags": ["Vue Parc", "Apt de Charme"],
-    "price_per_night": 55,
-    "available_dates": ["1 - 7 déc.", "15 - 21 déc.", "25 - 31 déc."],
-    "rules": [
-      "Non-fumeur",
-      "Pas de fêtes",
-      "Animaux autorisés sous conditions"
-    ],
-    "area": 102,
-    "bedrooms": 1,
-    "beds": 1,
-    "bathrooms": 2
+    "tags": ["Vue Parc", "Apt de Charme"]
   },
   {
     "id": "2139a317",
@@ -655,22 +460,15 @@
     "pictures": [
       "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-17-1.jpg"
     ],
-    "description": "Chambre fonctionnelle et économique située à Lille, Hauts-de-France, France. Proche des transports et commerces, c'est un choix idéal pour un séjour simple et pratique.",
+    "description": "Cette chambre dispose de toutes les facilités nécessaires. Proche métro et commerces.",
     "host": {
       "name": "Hugo Perrier",
       "picture": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/profile-picture-4.jpg"
     },
     "rating": "2",
-    "location": "Lille, Hauts-de-France, France",
+    "location": "Ile de France - Paris 20e",
     "equipments": ["Bouilloire", "Wi-fi", "Micro-Ondes"],
-    "tags": ["Économique", "Transports"],
-    "price_per_night": 217,
-    "available_dates": ["1 - 6 déc.", "11 - 16 déc.", "21 - 26 déc."],
-    "rules": ["Non-fumeur", "Pas de fêtes", "Animaux interdits"],
-    "area": 75,
-    "bedrooms": 1,
-    "beds": 2,
-    "bathrooms": 2
+    "tags": ["Vue Parc", "Métros"]
   },
   {
     "id": "6ff132c6",
@@ -681,13 +479,13 @@
       "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-18-2.jpg",
       "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-18-3.jpg"
     ],
-    "description": "Découvrez ce studio cosy situé à Nantes, Pays de la Loire, France. Avec une décoration chaleureuse et un emplacement idéal, c'est le refuge parfait pour explorer la ville et ses environs.",
+    "description": "Ce studio décoré avec goût sera votre nid douillet après une longue journée passée à découvrir Paris.",
     "host": {
       "name": "Michel Romy",
       "picture": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/profile-picture-11.jpg"
     },
     "rating": "4",
-    "location": "Nantes, Pays de la Loire, France",
+    "location": "Ile de France - Paris 13e",
     "equipments": [
       "Équipements de base",
       "Four",
@@ -695,14 +493,7 @@
       "Wi-fi",
       "Micro-Ondes"
     ],
-    "tags": ["Studio", "Cosy", "Centre-ville"],
-    "price_per_night": 124,
-    "available_dates": ["1 - 7 déc.", "13 - 19 déc.", "25 - 31 déc."],
-    "rules": ["Non-fumeur", "Pas de fêtes", "Animaux interdits"],
-    "area": 115,
-    "bedrooms": 3,
-    "beds": 3,
-    "bathrooms": 2
+    "tags": ["Studio", "Charmant", "13e"]
   },
   {
     "id": "cb02d69b",
@@ -711,13 +502,13 @@
     "pictures": [
       "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-19-1.jpg"
     ],
-    "description": "Profitez d'un séjour luxueux à Colmar, Alsace, France dans cet appartement situé au cœur du quartier historique. Parfait pour un couple ou une petite famille, cet hébergement offre une vue imprenable sur les ruelles pittoresques de Colmar.",
+    "description": "Au coeur du quartier historique du Marais, cet appartement est idéal pour un couple à la découverte de Paris. Situé sur la rue de Rivoli, il est à 5 minutes du Louvre.",
     "host": {
       "name": "Nathalie Jean",
       "picture": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/profile-picture-12.jpg"
     },
     "rating": "4",
-    "location": "Colmar, Alsace, France",
+    "location": "Ile de France - Paris 13e",
     "equipments": [
       "Wi-fi",
       "Équipements de base",
@@ -725,17 +516,6 @@
       "Frigo",
       "Baignoire"
     ],
-    "tags": ["Historique", "Centre-ville", "Confort"],
-    "price_per_night": 256,
-    "available_dates": ["1 - 7 déc.", "13 - 19 déc.", "25 - 31 déc."],
-    "rules": [
-      "Non-fumeur",
-      "Pas de fêtes",
-      "Animaux autorisés sous conditions"
-    ],
-    "area": 40,
-    "bedrooms": 2,
-    "beds": 1,
-    "bathrooms": 1
+    "tags": ["Louvre", "Marais", "Rivoli"]
   }
 ]

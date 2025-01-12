@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
-import { DropdownButton, DropdownContent, DropdownWrapper } from './style';
-import { useToggle } from '../../hooks/useToggle';
+import { DropdownButton, DropdownContent, DropdownWrapper } from '../styles/Dropdown';
+import { useToggle } from '../hooks/useToggle';
 
 type DropdownProps = {
   heading: string;

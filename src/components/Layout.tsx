@@ -1,8 +1,8 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-import { GlobalStyle } from './style';
-import Header from '../Header';
-import Footer from '../Footer';
+import { GlobalStyle } from '../styles/GlobalStyle';
+import Header from './Header';
+import Footer from './Footer';
 
 const Layout: React.FC = () => {
   return (

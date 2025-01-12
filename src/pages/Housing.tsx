@@ -73,7 +73,7 @@ const Housing: React.FC = () => {
           </ul>
         </HousingContentBloc>
 
-        <HousingContentBloc style={{ alignItems: 'end' }}>
+        <HousingContentBloc>
           <div>
             <span>{host.name}</span>
             <img src={host.picture} alt={`profil de ${host.name}`} />

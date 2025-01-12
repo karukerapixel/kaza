@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const HousingCardWrapper = styled.li`
   width: 100%;
@@ -8,7 +8,7 @@ export const HousingCardWrapper = styled.li`
 
   > a {
     width: 100%;
-    height: 100%;
+    height: 350px;
 
     > img {
       width: 100%;
@@ -19,5 +19,17 @@ export const HousingCardWrapper = styled.li`
     > h2 {
       text-transform: capitalize;
     }
+  }
+
+  @media screen and (max-width: 992px) {
+    > a {
+    width: 100%;
+    height: 300px;
+  }
+
+  @media screen and (max-width: 768px) {
+    > a {
+    width: 100%;
+    height: 200px;
   }
 `;

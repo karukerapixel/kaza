@@ -9,6 +9,12 @@ export const HousingHeader = styled.div`
   > h1 {
     font-size: 1.7rem;
   }
+
+  @media screen and (max-width: 768px) {
+    > h1 {
+      font-size: 1.2rem;
+    }
+  }
 `;
 
 export const HousingHeaderButtons = styled.div`
@@ -38,14 +44,35 @@ export const HousingContent = styled.section`
   width: 90%;
   display: flex;
   justify-content: space-between;
+  gap: 16px;
   margin: 24px 0;
+
+  > div {
+    &:nth-child(2) {
+      align-self: flex-end;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+
+    > div {
+      &:nth-child(2) {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+      }
+    }
+  }
 `;
 
 export const HousingContentBloc = styled.div`
-  height: 100px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 8px;
 
   > h2 {
     font-size: 1.7rem;
@@ -74,6 +101,16 @@ export const HousingContentBloc = styled.div`
       border-radius: 50%;
     }
   }
+
+  @media screen and (max-width: 768px) {
+    > h2 {
+      font-size: 1.2rem;
+    }
+
+    > div {
+      flex-direction: row-reverse;
+    }
+  }
 `;
 
 export const HousingDropdowns = styled.section`
@@ -81,4 +118,8 @@ export const HousingDropdowns = styled.section`
   display: flex;
   gap: 24px;
   margin-bottom: 24px;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 `;

@@ -8,4 +8,11 @@ export const RatingWrapper = styled.span`
     width: 30px;
     height: 30px;
   }
+
+  @media screen and (max-width: 768px) {
+    > img {
+      width: 15px;
+      height: 15px;
+    }
+  }
 `;

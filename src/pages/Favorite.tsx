@@ -4,6 +4,7 @@ import { GalleryList, GalleryWrapper } from 'styles/Home';
 import HousingCard from 'components/HousingCard';
 import housings from '../data/housings.json';
 
+// Type definition for housing data
 type HousingData = {
   id: string;
   title: string;
@@ -20,12 +21,16 @@ type HousingData = {
   tags: string[];
 };
 
+// Favorite component
 const Favorite: React.FC = () => {
-  const { storedValue } = useLocalStorage('fav');
-  const [favoriteHousings, setFavoriteHousings] = useState<HousingData[]>([]);
+  const { storedValue } = useLocalStorage('fav'); // Retrieve the 'fav' data from localStorage using the custom hook
+  const [favoriteHousings, setFavoriteHousings] = useState<HousingData[]>([]); // State to store the list of favorite housing data
 
+  // useEffect hook that runs when storedValue changes
   useEffect(() => {
+    // Check if there are any favorite items in localStorage
     if (storedValue && storedValue.length > 0) {
+      // Filter the housings to get only the ones that are marked as favorites
       const favorites = housings.filter((housing) =>
         storedValue.some((fav) => fav.id === housing.id)
       );

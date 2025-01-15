@@ -1,8 +1,9 @@
 import React from 'react';
 import { MemoryRouter } from 'react-router-dom';
 import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom'
+import '@testing-library/jest-dom';
 import HousingCard from '../components/HousingCard';
+import StyledProvider from 'contexts/StyledContext';
 
 describe('HousingCard Component', () => {
   const mockProps = {
@@ -13,9 +14,11 @@ describe('HousingCard Component', () => {
 
   test('renders housing card with correct data', () => {
     render(
-      <MemoryRouter>
-        <HousingCard {...mockProps} />
-      </MemoryRouter>
+      <StyledProvider>
+        <MemoryRouter>
+          <HousingCard {...mockProps} />
+        </MemoryRouter>
+      </StyledProvider>
     );
 
     // Vérifie que l'image est affichée avec le bon src et alt
@@ -36,9 +39,11 @@ describe('HousingCard Component', () => {
 
   test('renders without crashing when missing props', () => {
     render(
-      <MemoryRouter>
-        <HousingCard id="" title="" picture="" />
-      </MemoryRouter>
+      <StyledProvider>
+        <MemoryRouter>
+          <HousingCard id="" title="" picture="" />
+        </MemoryRouter>
+      </StyledProvider>
     );
 
     // Vérifie qu'une image est toujours rendue, même sans contenu

@@ -46,20 +46,10 @@ const Carousel: React.FC<CarouselProps> = ({ pictures = [] }) => {
   }
 
   return (
-    <CarouselWrapper
-      role="region"
-      aria-label="Image carousel"
-      onMouseEnter={() => setIsPaused(true)}
-      onMouseLeave={() => setIsPaused(false)}
-    >
+    <CarouselWrapper role="region" aria-label="Image carousel" onMouseEnter={() => setIsPaused(true)} onMouseLeave={() => setIsPaused(false)}>
       {hasMultiplePictures && (
         <Button
-          icon={
-            <FiChevronLeft
-              aria-hidden="true"
-              style={{ fontSize: '2rem', fontWeight: 900 }}
-            />
-          }
+          icon={<FiChevronLeft aria-hidden="true" style={{ fontSize: '2rem', fontWeight: 900 }} />}
           ariaLabel={'Previous picture'}
           onClick={() => handleClick('previous')}
           style={{
@@ -84,12 +74,7 @@ const Carousel: React.FC<CarouselProps> = ({ pictures = [] }) => {
 
       {hasMultiplePictures && (
         <Button
-          icon={
-            <FiChevronRight
-              aria-hidden="true"
-              style={{ fontSize: '2rem', fontWeight: 900 }}
-            />
-          }
+          icon={<FiChevronRight aria-hidden="true" style={{ fontSize: '2rem', fontWeight: 900 }} />}
           ariaLabel="Next picture"
           onClick={() => handleClick('next')}
           style={{

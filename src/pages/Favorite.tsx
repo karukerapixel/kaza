@@ -31,9 +31,7 @@ const Favorite: React.FC = () => {
     // Check if there are any favorite items in localStorage
     if (storedValue && storedValue.length > 0) {
       // Filter the housings to get only the ones that are marked as favorites
-      const favorites = housings.filter((housing) =>
-        storedValue.some((fav) => fav.id === housing.id)
-      );
+      const favorites = housings.filter((housing) => storedValue.some((fav) => fav.id === housing.id));
       setFavoriteHousings(favorites);
     }
   }, [storedValue]);
@@ -42,14 +40,7 @@ const Favorite: React.FC = () => {
     <GalleryWrapper>
       <GalleryList>
         {favoriteHousings.length > 0 ? (
-          favoriteHousings.map((housing) => (
-            <HousingCard
-              key={housing.id}
-              id={housing.id}
-              title={housing.title}
-              picture={housing.cover}
-            />
-          ))
+          favoriteHousings.map((housing) => <HousingCard key={housing.id} id={housing.id} title={housing.title} picture={housing.cover} />)
         ) : (
           <p>Aucun logement ajouté aux favoris.</p>
         )}

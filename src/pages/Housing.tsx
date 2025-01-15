@@ -1,12 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import {
-  HousingContent,
-  HousingContentBloc,
-  HousingDropdowns,
-  HousingHeader,
-  HousingHeaderButtons,
-} from '../styles/Housing';
+import { HousingContent, HousingContentBloc, HousingDropdowns, HousingHeader, HousingHeaderButtons } from '../styles/Housing';
 
 // Imported components
 import Carousel from '../components/Carousel';
@@ -71,7 +65,7 @@ const Housing: React.FC = () => {
       <HousingHeader>
         <h1>{data.title}</h1>
         <HousingHeaderButtons>
-          <ShareButton />
+          <ShareButton id={data.id} />
           <FavButton id={data.id} text={true} />
         </HousingHeaderButtons>
       </HousingHeader>

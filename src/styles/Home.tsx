@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const GalleryWrapper = styled.section`
   width: 100%;
+  min-height: 70.8vh;
   display: flex;
   justify-content: center;
   margin: 48px 0;

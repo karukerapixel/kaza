@@ -11,7 +11,7 @@ const Dropdown: React.FC<DropdownProps> = ({ heading, content }) => {
   const [isOpened, toggle] = useToggle();
 
   return (
-    <DropdownWrapper role="region" mode={`${isOpened}`} >
+    <DropdownWrapper role="region" mode={`${isOpened}`}>
       <DropdownButton type="button" onClick={toggle}>
         <h2>{heading}</h2>
       </DropdownButton>

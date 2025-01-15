@@ -6,7 +6,6 @@ export const useLocalStorage = <T extends { id: string | number }>(
   const [storedValue, setStoredValue] = useState<T[] | null>(() => {
     try {
       const item = localStorage.getItem(key);
-      console.log(item)
       return item ? JSON.parse(item) : null;
     } catch (error) {
       console.error('Error retrieving localStorage key:', error);

@@ -13,9 +13,7 @@ const Rating: React.FC<RatingProps> = ({ score }) => {
 
   // Convert the score to number with validation
   const parsedScore = parseFloat(score); // Convert the string to number
-  const validScore = !isNaN(parsedScore)
-    ? Math.max(0, Math.min(parsedScore, MAX_RATING))
-    : 0;
+  const validScore = !isNaN(parsedScore) ? Math.max(0, Math.min(parsedScore, MAX_RATING)) : 0;
 
   // Adding full stars according to the valid score
   for (let i = 0; i < validScore; i++) {

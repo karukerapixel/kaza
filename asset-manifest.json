@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/kaza/static/js/main.f4704045.js",
+    "main.js": "/kaza/static/js/main.031ea286.js",
     "index.html": "/kaza/index.html",
-    "main.f4704045.js.map": "/kaza/static/js/main.f4704045.js.map"
+    "main.031ea286.js.map": "/kaza/static/js/main.031ea286.js.map"
   },
   "entrypoints": [
-    "static/js/main.f4704045.js"
+    "static/js/main.031ea286.js"
   ]
 }

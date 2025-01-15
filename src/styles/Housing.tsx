@@ -23,19 +23,8 @@ export const HousingHeaderButtons = styled.div`
   gap: 12px;
 
   > button {
-    display: flex;
-    align-items: center;
-    background-color: transparent;
-    grid-gap: 4px;
-
-    > svg {
-      width: 15px;
-      height: 15px;
-    }
-
     > span {
       font-weight: 500;
-      text-decoration: underline;
     }
   }
 `;

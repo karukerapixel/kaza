@@ -5,14 +5,17 @@ import {
   HousingContentBloc,
   HousingDropdowns,
   HousingHeader,
+  HousingHeaderButtons,
 } from '../styles/Housing';
 import Carousel from '../components/Carousel';
 import Dropdown from '../components/Dropdown';
 import Rating from '../components/Rating';
 import housings from '../data/housings.json';
 import NotFoundPage from './NotFoundPage';
+import FavButton from 'components/FavButton';
+import ShareButton from 'components/ShareButton';
+import Loader from 'components/Loader';
 
-// Define the structure of a housing object
 type HousingData = {
   id: string;
   pictures: string[];
@@ -29,67 +32,68 @@ type HousingData = {
 };
 
 const Housing: React.FC = () => {
-  const { id } = useParams<{ id: string }>(); // Get the housing ID from the route
-  const [data, setData] = useState<HousingData | undefined>(); // State to store housing data
+  const { id } = useParams<{ id: string }>();
+  const [data, setData] = useState<HousingData | undefined>();
+  const [loading, setLoading] = useState(true);
+  const [isLoaded, setisLoaded] = useState<boolean | null>(null);
 
-  // Fetch housing data based on the ID
   useEffect(() => {
-    const housing = housings.find((h: HousingData) => h.id === id); // Find the housing by ID
-    setData(housing); // Update the state with the housing data
-  }, [id]); // Effect runs whenever `id` changes
+    setLoading(true);
+    try {
+      const housing = housings.find((h: HousingData) => h.id === id);
+      if (!housing) throw new Error('Housing not found');
+      setData(housing);
+      setisLoaded(true);
+    } catch (error) {
+      console.error(error);
+      setisLoaded(false);
+    } finally {
+      setLoading(false);
+    }
+  }, [id]);
 
-  // Display a message if no housing is found
-  if (!data) {
-    return <NotFoundPage />;
-  }
-
-  // Unstructuring the data state to access properties directly
-  const {
-    title,
-    pictures,
-    location,
-    tags,
-    host,
-    rating,
-    description,
-    equipments,
-  } = data;
+  if (loading) return <Loader />;
+  if (!isLoaded || !data) return <NotFoundPage />;
 
   return (
     <>
       <HousingHeader>
-        <h1>{title}</h1>
+        <h1>{data.title}</h1>
+        <HousingHeaderButtons>
+          <ShareButton />
+          <FavButton id={data.id} text={true} />
+        </HousingHeaderButtons>
       </HousingHeader>
 
-      <Carousel pictures={pictures} />
+      <Carousel pictures={data.pictures} />
 
       <HousingContent>
         <HousingContentBloc>
-          <h2>{location}</h2>
+          <h2>{data.location}</h2>
           <ul>
-            {tags.map((tag, index) => (
-              <li key={index}>{tag}</li>
+            {data.tags.map((tag) => (
+              <li key={tag}>{tag}</li>
             ))}
           </ul>
         </HousingContentBloc>
 
         <HousingContentBloc>
           <div>
-            <span>{host.name}</span>
-            <img src={host.picture} alt={`profil de ${host.name}`} />
+            <span>{data.host.name}</span>
+            <img src={data.host.picture} alt={`Photo de ${data.host.name}`} />
           </div>
-          <Rating score={rating} />
+          <Rating score={data.rating} />
         </HousingContentBloc>
       </HousingContent>
 
       <HousingDropdowns>
-        <Dropdown heading={'description'} content={<p>{description}</p>} />
+        <Dropdown heading="Description" content={<p>{data.description}</p>} />
         <Dropdown
-          heading={'équipement'}
+          heading="Équipement"
           content={
             <ul>
-              {equipments.map((equipment, index) => (
-                <li key={index}>{equipment}</li>
+              {data.equipments.map((equipment) => (
+                <li key={equipment}>{equipment}</li>
               ))}
             </ul>
           }

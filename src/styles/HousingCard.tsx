@@ -16,8 +16,14 @@ export const HousingCardWrapper = styled.li`
       border-radius: 5px;
     }
 
-    > h2 {
-      text-transform: capitalize;
+    > div {
+      display: flex;
+      justify-content: space-between;
+
+      > h2 {
+        color: ${({ theme }) => theme.colors.secondary};
+        text-transform: capitalize;
+      }
     }
   }
 

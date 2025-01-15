@@ -46,7 +46,7 @@ const ShareButton: React.FC<ShareButtonProps> = ({ id, style }) => {
 
   return (
     <>
-      <Button icon={<FaShareAlt style={style} />} text={'Partager'} onClick={toggle} />
+      <Button icon={<FaShareAlt />} text={'Partager'} onClick={toggle} style={style} />
       {isOpen && (
         <PopupWindow title="Partager cette annonce" isOpen={isOpen} onClose={toggle}>
           <div>

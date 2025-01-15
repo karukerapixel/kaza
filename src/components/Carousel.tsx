@@ -1,10 +1,7 @@
 import React, { useState, useCallback, useEffect } from 'react';
-import {
-  CarouselButton,
-  CarouselPictures,
-  CarouselWrapper,
-} from '../styles/Carousel';
+import { CarouselPictures, CarouselWrapper } from '../styles/Carousel';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
+import Button from './Button';
 
 type CarouselProps = {
   pictures: string[] | undefined;
@@ -56,14 +53,23 @@ const Carousel: React.FC<CarouselProps> = ({ pictures = [] }) => {
       onMouseLeave={() => setIsPaused(false)}
     >
       {hasMultiplePictures && (
-        <CarouselButton
-          type="button"
-          aria-label="Previous picture"
+        <Button
+          icon={
+            <FiChevronLeft
+              aria-hidden="true"
+              style={{ fontSize: '2rem', fontWeight: 900 }}
+            />
+          }
+          ariaLabel={'Previous picture'}
           onClick={() => handleClick('previous')}
-          style={{ left: '5%' }}
-        >
-          <FiChevronLeft aria-hidden="true" />
-        </CarouselButton>
+          style={{
+            backgroundColor: 'white',
+            borderRadius: '5px',
+            position: 'absolute',
+            padding: '10px',
+            margin: '24px',
+          }}
+        />
       )}
 
       {pictures.map((picture, index) => (
@@ -77,14 +83,24 @@ const Carousel: React.FC<CarouselProps> = ({ pictures = [] }) => {
       ))}
 
       {hasMultiplePictures && (
-        <CarouselButton
-          type="button"
-          aria-label="Next picture"
+        <Button
+          icon={
+            <FiChevronRight
+              aria-hidden="true"
+              style={{ fontSize: '2rem', fontWeight: 900 }}
+            />
+          }
+          ariaLabel="Next picture"
           onClick={() => handleClick('next')}
-          style={{ right: '5%' }}
-        >
-          <FiChevronRight aria-hidden="true" />
-        </CarouselButton>
+          style={{
+            backgroundColor: 'white',
+            borderRadius: '5px',
+            padding: '10px',
+            margin: '24px',
+            position: 'absolute',
+            right: '5%',
+          }}
+        />
       )}
     </CarouselWrapper>
   );

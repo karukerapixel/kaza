@@ -8,7 +8,6 @@ export const GlobalStyle = createGlobalStyle`
   * {
     font-size: 14px;
     font-family: "Roboto", sans-serif;
-    color: ${({ theme }) => theme.colors.secondary};
     text-decoration: none;
     line-height: 1.4;
     border: none;

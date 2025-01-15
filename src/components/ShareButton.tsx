@@ -12,7 +12,7 @@ type ShareButtonProps = {
 
 const ShareButton: React.FC<ShareButtonProps> = ({ id, style }) => {
   const [isOpen, toggle] = useToggle();
-  const url = 'https://karukerapixel.github.io/kaza/housings/';
+  const url = 'https://karukerapixel.github.io/kaza/#/housings/';
   const text = 'Ce logement est superbe ! Venez le découvrir en cliquant sur le lien suivant : ';
   const iconStyle = { color: 'white' };
   const buttonStyle = {

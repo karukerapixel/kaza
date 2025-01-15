@@ -7,15 +7,20 @@ import {
   HousingHeader,
   HousingHeaderButtons,
 } from '../styles/Housing';
+
+// Imported components
 import Carousel from '../components/Carousel';
 import Dropdown from '../components/Dropdown';
 import Rating from '../components/Rating';
-import housings from '../data/housings.json';
 import NotFoundPage from './NotFoundPage';
 import FavButton from 'components/FavButton';
 import ShareButton from 'components/ShareButton';
 import Loader from 'components/Loader';
 
+// Imported housings data
+import housings from '../data/housings.json';
+
+// Type definition for housing data
 type HousingData = {
   id: string;
   pictures: string[];
@@ -31,12 +36,14 @@ type HousingData = {
   equipments: string[];
 };
 
+// Housing component
 const Housing: React.FC = () => {
-  const { id } = useParams<{ id: string }>();
-  const [data, setData] = useState<HousingData | undefined>();
-  const [loading, setLoading] = useState(true);
-  const [isLoaded, setisLoaded] = useState<boolean | null>(null);
+  const { id } = useParams<{ id: string }>(); // Extracting the 'id' parameter from the URL
+  const [data, setData] = useState<HousingData | undefined>(); // State for storing housing data
+  const [loading, setLoading] = useState(true); // State for managing the loading state
+  const [isLoaded, setisLoaded] = useState<boolean | null>(null); // State for managing whether the data is loaded successfully
 
+  // Effect hook for fetching housing data when the component mounts or 'id' changes
   useEffect(() => {
     setLoading(true);
     try {
@@ -52,9 +59,13 @@ const Housing: React.FC = () => {
     }
   }, [id]);
 
+  // Show loader while data is loading
   if (loading) return <Loader />;
+
+  // Show NotFoundPage if data is not loaded or not found
   if (!isLoaded || !data) return <NotFoundPage />;
 
+  // Render Housing component
   return (
     <>
       <HousingHeader>
@@ -80,7 +91,7 @@ const Housing: React.FC = () => {
         <HousingContentBloc>
           <div>
             <span>{data.host.name}</span>
-            <img src={data.host.picture} alt={`Photo de ${data.host.name}`} />
+            <img src={data.host.picture} alt={`Photo of ${data.host.name}`} />
           </div>
           <Rating score={data.rating} />
         </HousingContentBloc>
@@ -89,7 +100,7 @@ const Housing: React.FC = () => {
       <HousingDropdowns>
         <Dropdown heading="Description" content={<p>{data.description}</p>} />
         <Dropdown
-          heading="Équipement"
+          heading="Equipments"
           content={
             <ul>
               {data.equipments.map((equipment) => (

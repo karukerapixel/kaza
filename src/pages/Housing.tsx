@@ -89,7 +89,7 @@ const Housing: React.FC = () => {
         <HousingContentBloc>
           <div>
             <span>{data.host.name}</span>
-            <img src={data.host.picture} alt={`Photo of ${data.host.name}`} />
+            <img src={data.host.picture} alt={`photo de ${data.host.name}`} />
           </div>
           <Rating score={data.rating} />
         </HousingContentBloc>
@@ -98,7 +98,7 @@ const Housing: React.FC = () => {
       <HousingDropdowns>
         <Dropdown heading="Description" content={<p>{data.description}</p>} />
         <Dropdown
-          heading="Equipments"
+          heading="Equipements"
           content={
             <ul>
               {data.equipments.map((equipment) => (

@@ -27,6 +27,18 @@ export const HousingHeaderButtons = styled.div`
       font-weight: 500;
     }
   }
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+`;
+
+export const HousingHeaderMenu = styled.div`
+  display: none;
+
+  @media screen and (max-width: 768px) {
+    display: flex;
+  }
 `;
 
 export const HousingContent = styled.section`
@@ -68,7 +80,9 @@ export const HousingContentBloc = styled.div`
   }
 
   > ul {
+    width: 100%;
     display: flex;
+    flex-wrap: wrap;
     gap: 12px;
 
     > li {

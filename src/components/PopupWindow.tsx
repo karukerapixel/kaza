@@ -6,7 +6,7 @@ import Button from './Button';
 type PopupWindowProps = {
   isOpen: boolean;
   onClose: () => void;
-  title: string;
+  title?: string;
   children: React.ReactNode;
 };
 
@@ -17,11 +17,13 @@ const PopupWindow: React.FC<PopupWindowProps> = ({ isOpen, onClose, title, child
 
   return (
     <PopupWindowWrapper onClick={onClose}>
-      <PopupWindowContent isClosing={!isOpen} onClick={(e) => e.stopPropagation()}>
-        <div>
-          <h2>{title}</h2>
-          <Button icon={iconElement} onClick={onClose} style={buttonStyle} />
-        </div>
+      <PopupWindowContent isclosing={`${!isOpen}`} onClick={(e) => e.stopPropagation()}>
+        {title && (
+          <div>
+            <h2>{title}</h2>
+            <Button icon={iconElement} onClick={onClose} style={buttonStyle} />
+          </div>
+        )}
         {children}
       </PopupWindowContent>
     </PopupWindowWrapper>

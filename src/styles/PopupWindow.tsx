@@ -29,14 +29,16 @@ export const PopupWindowWrapper = styled.div`
 `;
 
 // Pop-up window content style
-export const PopupWindowContent = styled.div<{ isClosing: boolean }>`
+export const PopupWindowContent = styled.div<{ isclosing: string }>`
   width: 100%;
   max-width: 500px;
   background: white;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  animation: ${({ isClosing }) => isClosing && fadeIn} 0.3s ease-out;
+  animation: ${({ isclosing }) => isclosing === "false" && fadeIn} 0.3s ease-out;
+  position: absolute;
+  justify-self: center;
 
   > div {
     display: flex;
@@ -53,6 +55,20 @@ export const PopupWindowContent = styled.div<{ isClosing: boolean }>`
       grid-template-columns: repeat(3, 1fr);
       grid-gap: 24px;
       margin: 0;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    max-width: 100%;
+    bottom: 0;
+
+    > div {
+      &:nth-child(2) {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 24px;
+        margin: 0;
+      }
     }
   }
 `;

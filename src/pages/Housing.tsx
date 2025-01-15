@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { HousingContent, HousingContentBloc, HousingDropdowns, HousingHeader, HousingHeaderButtons } from '../styles/Housing';
+import { HousingContent, HousingContentBloc, HousingDropdowns, HousingHeader, HousingHeaderButtons, HousingHeaderMenu } from '../styles/Housing';
 
 // Imported components
 import Carousel from '../components/Carousel';
@@ -13,6 +13,7 @@ import Loader from 'components/Loader';
 
 // Imported housings data
 import housings from '../data/housings.json';
+import SettingsButton from 'components/SettingsButton';
 
 // Type definition for housing data
 type HousingData = {
@@ -64,6 +65,9 @@ const Housing: React.FC = () => {
     <>
       <HousingHeader>
         <h1>{data.title}</h1>
+        <HousingHeaderMenu>
+          <SettingsButton id={data.id} style={{ width: 20, height: 20 }} />
+        </HousingHeaderMenu>
         <HousingHeaderButtons>
           <ShareButton id={data.id} />
           <FavButton id={data.id} text={true} />

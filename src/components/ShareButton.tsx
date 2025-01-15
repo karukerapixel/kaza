@@ -3,12 +3,14 @@ import { useToggle } from 'hooks/useToggle';
 import { FaFacebook, FaShareAlt, FaTwitter, FaWhatsapp } from 'react-icons/fa';
 import Button from './Button';
 import PopupWindow from './PopupWindow';
+import { CSSProperties } from 'styled-components';
 
 type ShareButtonProps = {
   id: string;
+  style?: CSSProperties;
 };
 
-const ShareButton: React.FC<ShareButtonProps> = ({ id }) => {
+const ShareButton: React.FC<ShareButtonProps> = ({ id, style }) => {
   const [isOpen, toggle] = useToggle();
   const url = 'https://karukerapixel.github.io/kaza/housings/';
   const text = 'Ce logement est superbe ! Venez le découvrir en cliquant sur le lien suivant : ';
@@ -44,7 +46,7 @@ const ShareButton: React.FC<ShareButtonProps> = ({ id }) => {
 
   return (
     <>
-      <Button icon={<FaShareAlt />} text={'Partager'} onClick={toggle} />
+      <Button icon={<FaShareAlt style={style} />} text={'Partager'} onClick={toggle} />
       {isOpen && (
         <PopupWindow title="Partager cette annonce" isOpen={isOpen} onClose={toggle}>
           <div>

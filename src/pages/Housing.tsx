@@ -12,7 +12,8 @@ import ShareButton from 'components/ShareButton';
 import Loader from 'components/Loader';
 
 // Imported housings data
-import housings from '../data/housings.json';
+import { collection, getDocs } from 'firebase/firestore';
+import { firebaseDB } from 'config/firebase';
 
 // Type definition for housing data
 type HousingData = {
@@ -32,76 +33,77 @@ type HousingData = {
 
 // Housing component
 const Housing: React.FC = () => {
-  const { id } = useParams<{ id: string }>(); // Extracting the 'id' parameter from the URL
-  const [data, setData] = useState<HousingData | undefined>(); // State for storing housing data
-  const [loading, setLoading] = useState(true); // State for managing the loading state
-  const [isLoaded, setisLoaded] = useState<boolean | null>(null); // State for managing whether the data is loaded successfully
+  const { id } = useParams<{ id: string }>();
+  const [data, setData] = useState<HousingData | null>(null);
+  const [loading, setLoading] = useState(true);
 
-  // Effect hook for fetching housing data when the component mounts or 'id' changes
+  const housingsCollectionRef = collection(firebaseDB, 'housings');
+
   useEffect(() => {
-    setLoading(true);
-    try {
-      const housing = housings.find((h: HousingData) => h.id === id);
-      if (!housing) throw new Error('Housing not found');
-      setData(housing);
-      setisLoaded(true);
-    } catch (error) {
-      console.error(error);
-      setisLoaded(false);
-    } finally {
-      setLoading(false);
-    }
-  }, [id]);
+    const fetchHousingData = async () => {
+      try {
+        // Fetch Firebase housings
+        const request = await getDocs(housingsCollectionRef);
+        const data = request.docs.map((doc) => ({
+          ...doc.data(),
+          id: doc.id,
+        })) as HousingData[];
 
-  // Show loader while data is loading
+        // Combine local and Firebase housings
+        const housingsDB = [...data];
+
+        // Find the housing by ID
+        const housing = housingsDB.find((h) => h.id === id);
+
+        if (!housing) throw new Error('Housing not found');
+
+        setData(housing);
+      } catch (error) {
+        console.error(error);
+        setData(null);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchHousingData();
+  }, [id, housingsCollectionRef]);
+
   if (loading) return <Loader />;
+  if (!data) return <NotFoundPage />;
 
-  // Show NotFoundPage if data is not loaded or not found
-  if (!isLoaded || !data) return <NotFoundPage />;
-
-  // Render Housing component
   return (
     <>
       <HousingHeader>
-        <h1>{data.title}</h1>
+        <h1>{data?.title}</h1>
         <HousingHeaderButtons>
-          <ShareButton id={data.id} />
-          <FavButton id={data.id} text={true} />
+          <ShareButton id={data?.id} />
+          <FavButton id={data?.id} text={true} />
         </HousingHeaderButtons>
       </HousingHeader>
 
-      <Carousel pictures={data.pictures} />
+      <Carousel pictures={data?.pictures || []} />
 
       <HousingContent>
         <HousingContentBloc>
-          <h2>{data.location}</h2>
-          <ul>
-            {data.tags.map((tag) => (
-              <li key={tag}>{tag}</li>
-            ))}
-          </ul>
+          <h2>{data?.location}</h2>
+          <ul>{data?.tags?.map((tag) => <li key={tag}>{tag}</li>) || <p>No tags available</p>}</ul>
         </HousingContentBloc>
 
         <HousingContentBloc>
           <div>
-            <span>{data.host.name}</span>
-            <img src={data.host.picture} alt={`Photo of ${data.host.name}`} />
+            <span>{data?.host?.name}</span>
+            <img src={data?.host.picture} alt={`Photo of ${data?.host.name}`} />
           </div>
-          <Rating score={data.rating} />
+          <Rating score={data?.rating || '0'} />
         </HousingContentBloc>
       </HousingContent>
 
       <HousingDropdowns>
-        <Dropdown heading="Description" content={<p>{data.description}</p>} />
+        <Dropdown heading="Description" content={<p>{data?.description}</p>} />
         <Dropdown
           heading="Equipments"
-          content={
-            <ul>
-              {data.equipments.map((equipment) => (
-                <li key={equipment}>{equipment}</li>
-              ))}
-            </ul>
-          }
+          content={<ul>{data?.equipments?.map((equipment) => <li key={equipment}>{equipment}</li>) || <p>No equipments available</p>}</ul>}
         />
       </HousingDropdowns>
     </>

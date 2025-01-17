@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { useLocalStorage } from 'hooks/useLocalStorage';
+import { collection, getDocs } from 'firebase/firestore';
+import { firebaseDB } from 'config/firebase';
+
 import { GalleryList, GalleryWrapper } from 'styles/Home';
 import HousingCard from 'components/HousingCard';
-import housings from '../data/housings.json';
+import Loader from 'components/Loader';
 
 // Type definition for housing data
-type HousingData = {
+type Housing = {
   id: string;
   title: string;
   cover: string;
@@ -23,26 +26,47 @@ type HousingData = {
 
 // Favorite component
 const Favorite: React.FC = () => {
-  const { storedValue } = useLocalStorage('fav'); // Retrieve the 'fav' data from localStorage using the custom hook
-  const [favoriteHousings, setFavoriteHousings] = useState<HousingData[]>([]); // State to store the list of favorite housing data
+  const { storedValue } = useLocalStorage('fav'); // Retrieve the favorite housing IDs from localStorage
+  const housingsCollectionRef = collection(firebaseDB, 'housings');
 
-  // useEffect hook that runs when storedValue changes
+  const [favHousings, setFavHousings] = useState<Housing[]>([]); // List of favorite housings
+  const [loading, setLoading] = useState(true); // Loading state
+
   useEffect(() => {
-    // Check if there are any favorite items in localStorage
-    if (storedValue && storedValue.length > 0) {
-      // Filter the housings to get only the ones that are marked as favorites
-      const favorites = housings.filter((housing) => storedValue.some((fav) => fav.id === housing.id));
-      setFavoriteHousings(favorites);
-    }
+    const fetchFavoriteHousings = async () => {
+      try {
+        setLoading(true);
+
+        // Fetch all housings from Firebase
+        const request = await getDocs(housingsCollectionRef);
+        const data = request.docs.map((doc) => ({
+          ...doc.data(),
+          id: doc.id,
+        })) as Housing[];
+
+        // Filter housings based on favorites stored in localStorage
+        const favorites = data.filter((h) => storedValue && storedValue.find((fav) => fav.id === h.id));
+
+        setFavHousings(favorites);
+      } catch (error) {
+        console.error('Error fetching favorite housings:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchFavoriteHousings();
   }, [storedValue]);
+
+  if (loading) return <Loader />;
 
   return (
     <GalleryWrapper>
       <GalleryList>
-        {favoriteHousings.length > 0 ? (
-          favoriteHousings.map((housing) => <HousingCard key={housing.id} id={housing.id} title={housing.title} picture={housing.cover} />)
+        {favHousings.length > 0 ? (
+          favHousings.map((housing) => <HousingCard key={housing.id} id={housing.id} title={housing.title} picture={housing.cover} />)
         ) : (
-          <p>Aucun logement ajouté aux favoris.</p>
+          <li>Aucun logement ajouté aux favoris.</li>
         )}
       </GalleryList>
     </GalleryWrapper>

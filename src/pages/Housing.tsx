@@ -3,18 +3,18 @@ import { useParams } from 'react-router-dom';
 import { HousingContent, HousingContentBloc, HousingDropdowns, HousingHeader, HousingHeaderButtons, HousingHeaderSettings } from '../styles/Housing';
 
 // Imported components
-import Carousel from '../components/Carousel';
-import Dropdown from '../components/Dropdown';
-import Rating from '../components/Rating';
-import NotFoundPage from './NotFoundPage';
-import FavButton from 'components/FavButton';
-import ShareButton from 'components/ShareButton';
 import Loader from 'components/Loader';
+import NotFoundPage from './NotFoundPage';
+import SettingsButton from 'components/SettingsButton';
+import ShareButton from 'components/ShareButton';
+import FavButton from 'components/FavButton';
+import Carousel from '../components/Carousel';
+import Rating from '../components/Rating';
+import Dropdown from '../components/Dropdown';
 
 // Imported housings data
 import { collection, getDocs } from 'firebase/firestore';
 import { firebaseDB } from 'config/firebase';
-import SettingsButton from 'components/SettingsButton';
 
 // Type definition for housing data
 type HousingData = {

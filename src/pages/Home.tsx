@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { firebaseDB } from 'config/firebase';
 import { collection, getDocs } from 'firebase/firestore';
 import { GalleryList, GalleryWrapper } from '../styles/Home';
-import HousingCard from '../components/HousingCard';
 import Loader from 'components/Loader';
+import HousingCard from '../components/HousingCard';
 
 interface Housing {
   id: string;

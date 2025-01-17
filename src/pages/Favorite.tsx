@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { useLocalStorage } from 'hooks/useLocalStorage';
 import { collection, getDocs } from 'firebase/firestore';
 import { firebaseDB } from 'config/firebase';
-
 import { GalleryList, GalleryWrapper } from 'styles/Home';
-import HousingCard from 'components/HousingCard';
+
 import Loader from 'components/Loader';
+import HousingCard from 'components/HousingCard';
 
 // Type definition for housing data
 type Housing = {

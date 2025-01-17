@@ -50,7 +50,10 @@ export const HousingContent = styled.section`
 
   > div {
     &:nth-child(2) {
-      align-self: flex-end;
+      >div {
+        display: flex;
+        justify-content: flex-end;
+      }
     }
   }
 

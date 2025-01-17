@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { HousingContent, HousingContentBloc, HousingDropdowns, HousingHeader, HousingHeaderButtons, HousingHeaderMenu } from '../styles/Housing';
+import { HousingContent, HousingContentBloc, HousingDropdowns, HousingHeader, HousingHeaderButtons, HousingHeaderSettings } from '../styles/Housing';
 
 // Imported components
 import Carousel from '../components/Carousel';
@@ -14,6 +14,7 @@ import Loader from 'components/Loader';
 // Imported housings data
 import { collection, getDocs } from 'firebase/firestore';
 import { firebaseDB } from 'config/firebase';
+import SettingsButton from 'components/SettingsButton';
 
 // Type definition for housing data
 type HousingData = {
@@ -76,6 +77,9 @@ const Housing: React.FC = () => {
     <>
       <HousingHeader>
         <h1>{data.title}</h1>
+        <HousingHeaderSettings>
+          <SettingsButton id={data?.id} />
+        </HousingHeaderSettings>
         <HousingHeaderButtons>
           <ShareButton id={data?.id} />
           <FavButton id={data?.id} text={true} />

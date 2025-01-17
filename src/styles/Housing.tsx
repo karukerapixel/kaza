@@ -33,7 +33,7 @@ export const HousingHeaderButtons = styled.div`
   }
 `;
 
-export const HousingHeaderMenu = styled.div`
+export const HousingHeaderSettings = styled.div`
   display: none;
 
   @media screen and (max-width: 768px) {
